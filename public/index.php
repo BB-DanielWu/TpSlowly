@@ -11,6 +11,12 @@
 
 // [ 应用入口文件 ]
 
+if (isset($_SERVER["SERVER_ENV"]))
+{
+    define('TP_ENV', $_SERVER["SERVER_ENV"]);
+}
+defined('TP_ENV') or define('TP_ENV', 'dev');
+
 // 定义应用目录
 define('APP_PATH', __DIR__ . '/../application/');
 // 加载框架引导文件
