@@ -1,18 +1,10 @@
 <?php
-// +----------------------------------------------------------------------
-// | ThinkPHP [ WE CAN DO IT JUST THINK ]
-// +----------------------------------------------------------------------
-// | Copyright (c) 2006-2016 http://thinkphp.cn All rights reserved.
-// +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
-// +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
-// +----------------------------------------------------------------------
 
 // [ 应用入口文件 ]
 
 // 定义项目路径
 define('APP_PATH', __DIR__ . '/../../application/');
+define('CONF_PATH',APP_PATH.'index/config/');
 
 //-- 增加 环境判断 需要配合nginx 配置
 /*
@@ -28,11 +20,15 @@ if (isset($_SERVER["SERVER_ENV"]))
 }
 defined('TP_ENV') or define('TP_ENV', 'dev');
 
+
 // 加载框架基础文件
 require __DIR__ . '/../../thinkphp/base.php';
+
 // 绑定当前入口文件到index模块
 \think\Route::bind('index');
+
 // 关闭admin模块的路由
-\think\App::route(false);
+//\think\App::route(false);
+
 // 执行应用
 \think\App::run()->send();

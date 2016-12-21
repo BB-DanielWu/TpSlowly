@@ -7,6 +7,10 @@ class Index
 {
     public function index()
     {
-		return 'admin';
+	    return 'admin';
     }
+	public function hellow()
+	{
+		echo '11';
+	}
 }
