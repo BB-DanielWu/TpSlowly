@@ -1,9 +1,9 @@
 <?php
 
 use think\Route;
-#Route::bind('index');
+
 Route::rule([
-	'new/:id' => 'index/News/read',
+	'new/:id' => 'News/read',
 ],'','GET');
 
 return [

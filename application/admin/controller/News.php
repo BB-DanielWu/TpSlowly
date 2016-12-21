@@ -7,6 +7,6 @@ class news
 {
 	public function read($id)
 	{
-		echo 'hello wo';echo '<br>';var_dump($id);
+		echo 'hello admin';echo '<br>';var_dump($id);
 	}
 }

@@ -1,10 +1,9 @@
 <?php
 
 use think\Route;
-#Route::bind('admin');
 
 Route::rule([
-	'new/:id' => 'admin/News/read',
+	'new/:id' => 'News/read',
 ],'','GET');
 
 return [
