@@ -19,12 +19,9 @@ defined('TP_ENV') or define('TP_ENV', 'dev');
 // 定义项目路径
 define('APP_PATH', __DIR__ . '/../../application/');
 
-if (TP_ENV == 'prod')
-{
-	define('MODULE_NAME', substr(strrchr(__DIR__,"/"),1));
-}else{
-	define('MODULE_NAME', substr(strrchr(__DIR__,"\\"),1));
-}
+//定义config目录
+//模块名  等同于入口文件名 需要服务器配置
+define('MODULE_NAME', basename(__FILE__, '.php'));
 
 define('CONF_PATH',APP_PATH.MODULE_NAME.'/config/');
 
