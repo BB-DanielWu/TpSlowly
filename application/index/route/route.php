@@ -6,6 +6,8 @@ Route::rule([
 	'new/:id' => 'News/read',
 ],'','GET');
 
+Route::resource('blog','Blog');
+
 return [
     '__pattern__' => [
         'name' => '\w+',

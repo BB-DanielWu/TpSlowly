@@ -4,7 +4,10 @@ use think\Route;
 
 Route::rule([
 	'new/:id' => 'News/read',
+	'hellow' => 'Index/hellow',
 ],'','GET');
+
+Route::resource('blog','Blog');
 
 return [
     '__pattern__' => [
