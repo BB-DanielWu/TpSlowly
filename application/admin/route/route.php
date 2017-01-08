@@ -7,7 +7,7 @@ Route::rule([
 	'hellow' => 'Index/hellow',
 ],'','GET');
 
-Route::resource('blog','Blog');
+Route::resource('user_admin','Adminuser');
 
 return [
     '__pattern__' => [
