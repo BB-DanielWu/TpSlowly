@@ -7,8 +7,9 @@ Route::rule([
 	'hellow' => 'Index/hellow',
 ],'','GET');
 
-Route::resource('user_admin','Adminuser');
-
+Route::resource('user_admin','AdminuserController');
+Route::rule('user_admin/disable/:operation/:id','AdminuserController/disable');
+Route::rule('user_admin/resetpassword/:id','AdminuserController/resetpassword');
 return [
     '__pattern__' => [
         'name' => '\w+',

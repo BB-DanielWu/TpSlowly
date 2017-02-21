@@ -13,6 +13,6 @@ if (TP_ENV == 'prod')
 	//加载模块配置
 	Config::load(APP_PATH . MODULE_NAME .'/config/testconfig.php');
 	//database配置
-	Config::load(APP_PATH . MODULE_NAME. '/config/testdatabase.php');
+	//Config::load(APP_PATH . MODULE_NAME. '/config/testdatabase.php');
 }
 ?>
